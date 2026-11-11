@@ -1,0 +1,9 @@
+{
+  "run_id": "phase4-repair-final-2026-11-11",
+  "execution_timestamp": "2026-11-11T17:43:09.158258+00:00",
+  "model": "openai/gpt-oss-20b",
+  "model_configuration": "{\"max_provider_retries\": 2, \"model\": \"openai/gpt-oss-20b\", \"provider\": \"Groq\", \"structured_output\": \"json_schema\", \"temperature\": 0}",
+  "dataset_sha256": "afb5e725270bce0fee239fa7d728a229d511c730a61d83aa9946c83713b502e2",
+  "dataset_latest_observation": "2026-09-30",
+  "dataset_rows": 161883
+}

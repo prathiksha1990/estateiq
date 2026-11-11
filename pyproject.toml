@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nj-real-estate-intelligence"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0,<3.0",
+  "pydantic>=2.7,<3.0",
+  "langchain>=1.0,<2.0",
+  "langgraph>=1.0,<2.0",
+  "langgraph-checkpoint-sqlite>=3.0,<4.0",
+  "langchain-groq>=1.0,<2.0",
+  "streamlit>=1.40,<2.0",
+  "plotly>=5.24,<7.0",
+  "python-dotenv>=1.0,<2.0",
+]
+
+[project.scripts]
+ingest-real-estate = "real_estate.cli:main"
+ask-real-estate = "real_estate.agent_cli:main"
+evaluate-real-estate = "real_estate.evaluation.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

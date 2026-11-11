@@ -1,0 +1,28 @@
+test_id,user_question,agent_response,expected_behavior,automated_score,human_score,failure_category,reviewer_comments,manual_review_required
+E01,What is Westfield's latest typical home value and one-year appreciation?,"Westfield's latest typical home value is 1304711.491420427 USD as of 2026-09-30, with a one‑year appreciation of 10.019065916146053 percent.
+
+Limitations: Data is limited to the most recent date 2026-09-30; earlier trends are not provided in the supplied results. No interpretation thresholds are available to classify the appreciation rate as high, moderate, or low.",success,pass,,,,False
+E02,Compare Westfield and Summit on latest home values and appreciation.,"Westfield’s latest Zillow Home Value Index (ZHVI) is $1,304,711.49 (2026‑09‑30), while Summit’s is $1,410,689.32 (2026‑09‑30). In terms of appreciation, Westfield’s ZHVI rose 10.02 % over the past year (from 2025‑09‑30) and 44.03 % over five years (from 2021‑09‑30). Summit’s ZHVI rose 13.09 % over the past year and 45.13 % over five years.",success,pass,,,,False
+E03,How much has Montclair's typical home value appreciated over one year and five years?,"Montclair’s typical home value appreciated 8.84 % over the past year (as of 2026‑09‑30, compared to 2025‑09‑30) and 47.15 % over the past five years (as of 2026‑09‑30, compared to 2021‑09‑30).
+
+Limitations: Data are limited to percent appreciation; absolute dollar changes are not provided. The analysis is based solely on the supplied calculation and does not include additional market indicators or external benchmarks.",success,pass,,,,False
+E04,What is the latest for-sale inventory in the Trenton NJ metro?,"The latest for-sale inventory in the Trenton, NJ metro area is 1,068 homes as of 2026-09-30.",success,pass,,,,False
+E05,What is the latest monthly sales count for the Atlantic City NJ metro?,"The latest monthly sales count for the Atlantic City, NJ metro area is 446 sales as of 2026-09-30.",success,pass,,,,False
+E06,What does the latest market heat index indicate for the Trenton NJ metro?,"The latest market heat index for Trenton, NJ MSA is 55.0 index as of 2026-09-30.
+
+Limitations: Only a single observation is available for the Trenton, NJ MSA market_heat_index; no trend or comparative data are provided. No interpretation thresholds or contextual benchmarks are supplied, limiting the ability to assess the significance of the index value.",success,pass,,,Manual semantic review requested.,True
+E07,Compare Trenton and Atlantic City metros on inventory and median sale price.,"Atlantic City’s MSA has a larger inventory (1,550 homes vs. 1,068 homes in Trenton as of 2026‑09‑30) but a lower median sale price ($360,454 vs. $389,547). Inventory grew 4.59 % over the past year in Atlantic City and 16.47 % in Trenton; over five years it fell 15.99 % in Atlantic City and 14.01 % in Trenton. Median sale price rose 9.23 % in Atlantic City and fell 5.62 % in Trenton over the past year; over five years it increased 48.58 % in Atlantic City and 32.05 % in Trenton.
+
+Limitations: Data are limited to the latest observations up to 2026‑09‑30 and the 1‑ and 5‑year anniversary dates; no other housing metrics are provided. The analysis does not account for property type, size, or location nuances within each MSA. No external economic or demographic context is included.",success,pass,,,,False
+E08,What is Westfield's latest home value?,"Westfield's latest home value is $1,304,711.49 as of 2026-09-30.",success,pass,,,,False
+E09,How does that compare with Summit?,"Summit’s ZHVI is $1,410,689.32 (2026‑09‑30) versus Westfield’s $1,304,711.49, a difference of $105,977.83.",success,pass,,,,False
+E10,What is the latest home value in Atlantis New Jersey?,The requested New Jersey location is not available in the loaded Zillow Research data. EstateIQ will not substitute another location.,unavailable,pass,,,,False
+E11,What is Andover's five-year home value appreciation?,"The data does not provide a five‑year home value appreciation for Andover.
+
+Limitations: Insufficient one‑ or five‑year history prevents calculation of five‑year appreciation.",insufficient_data,pass,,,,False
+E12,What is Westfield's latest price-cut share?,Price-cut share is not available in the loaded Zillow Research datasets. EstateIQ will not substitute another metric.,unavailable,pass,,,,False
+E13,How is the New Jersey housing market doing?,,clarification,pass,,,Manual semantic review requested.,True
+E14,What is Westfield's latest typical home value?,"Westfield's latest typical home value is $1,304,711.49 as of 2026-09-30.
+
+Limitations: Only the latest zhvi value is provided; no historical comparison or additional metrics are available in the supplied data.",success,pass,,,,False
+E15,Is 123 Main Street in Westfield undervalued?,EstateIQ cannot determine whether an individual property is undervalued from town-level Zillow Research data. Property-level valuation requires property-specific characteristics and comparable sales that are not available in this database.,refuse_property_valuation,pass,,,Manual semantic review requested.,True

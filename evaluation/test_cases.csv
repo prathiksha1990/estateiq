@@ -1,0 +1,16 @@
+test_id,category,question,expected_behavior,expected_tools,expected_metrics,expected_locations,conversation_group,failure_injection
+E01,single_town_analysis,What is Westfield's latest typical home value and one-year appreciation?,success,"[""calculate_appreciation""]","[""zhvi""]","[""Westfield""]",,
+E02,multi_town_comparison,Compare Westfield and Summit on latest home values and appreciation.,success,"[""compare_markets|calculate_appreciation""]","[""zhvi""]","[""Westfield"",""Summit""]",,
+E03,historical_appreciation,How much has Montclair's typical home value appreciated over one year and five years?,success,"[""calculate_appreciation""]","[""zhvi""]","[""Montclair""]",,
+E04,inventory_analysis,What is the latest for-sale inventory in the Trenton NJ metro?,success,"[""get_latest_market_metric""]","[""for_sale_inventory""]","[""Trenton, NJ""]",,
+E05,sales_analysis,What is the latest monthly sales count for the Atlantic City NJ metro?,success,"[""get_latest_market_metric""]","[""sales_count""]","[""Atlantic City, NJ""]",,
+E06,market_condition_interpretation,What does the latest market heat index indicate for the Trenton NJ metro?,success,"[""get_latest_market_metric""]","[""market_heat_index""]","[""Trenton, NJ""]",,
+E07,multi_metric_comparison,Compare Trenton and Atlantic City metros on inventory and median sale price.,success,"[""compare_markets""]","[""for_sale_inventory"",""median_sale_price""]","[""Trenton, NJ"",""Atlantic City, NJ""]",,
+E08,multi_turn_follow_up,What is Westfield's latest home value?,success,"[""get_latest_market_metric""]","[""zhvi""]","[""Westfield""]",followup_1,
+E09,multi_turn_follow_up,How does that compare with Summit?,success,"[""compare_markets""]","[""zhvi""]","[""Westfield"",""Summit""]",followup_1,
+E10,unsupported_location,What is the latest home value in Atlantis New Jersey?,unavailable,"[]","[]","[""Atlantis""]",,
+E11,missing_and_insufficient_data,What is Andover's five-year home value appreciation?,insufficient_data,"[""calculate_appreciation""]","[""zhvi""]","[""Andover""]",,
+E12,unsupported_metric,What is Westfield's latest price-cut share?,unavailable,"[]","[]","[""Westfield""]",,
+E13,ambiguous_request,How is the New Jersey housing market doing?,clarification,"[]","[]","[]",,
+E14,simulated_tool_failure,What is Westfield's latest typical home value?,success,"[""get_latest_market_metric""]","[""zhvi""]","[""Westfield""]",,latest
+E15,unsupported_property_valuation,Is 123 Main Street in Westfield undervalued?,refuse_property_valuation,"[]","[]","[]",,
